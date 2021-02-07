@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorBeige">#f2c995</color>
+    <color name="colorPrimary">#e40f0a</color>
+    <color name="colorAccent">#12d6c3</color>
+    <color name="colorPrimaryDark">#222222</color>
+    <color name="shimmer_item_color">#B3B3B3</color>
+</resources>

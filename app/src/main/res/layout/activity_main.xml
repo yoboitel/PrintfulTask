@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_home_background"
+    tools:context=".activities.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="9dp"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/topView"
+        app:layout_constraintEnd_toEndOf="@+id/topView"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/topView"
+        app:srcCompat="@drawable/printful_logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/poppins_extrabold"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/now_playing_movies"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="9dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="X"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/topView"
+        app:layout_constraintEnd_toEndOf="@+id/avatarView"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/topView"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/white_halfrounded_card"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:requiresFadingEdge="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline">
+
+        <!-- Adding 5 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_row" />
+
+            <include layout="@layout/shimmer_row" />
+
+            <include layout="@layout/shimmer_row" />
+
+            <include layout="@layout/shimmer_row" />
+
+            <include layout="@layout/shimmer_row" />
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <xyz.schwaab.avvylib.AvatarView
+        android:id="@+id/avatarView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="8.1dp"
+        android:padding="8dp"
+        app:avvy_border_color="@android:color/darker_gray"
+        app:avvy_border_highlight_color="#ff5900"
+        app:avvy_border_highlight_color_end="#bf15bc"
+        app:avvy_border_thickness="2dp"
+        app:avvy_border_thickness_highlight="2.3dp"
+        app:avvy_distance_to_border="3dp"
+        app:avvy_highlighted="true"
+        app:avvy_loading_arches="5"
+        app:avvy_loading_arches_degree_area="90"
+        app:layout_constraintBottom_toBottomOf="@+id/topView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/topView"
+        app:layout_constraintTop_toTopOf="@+id/topView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

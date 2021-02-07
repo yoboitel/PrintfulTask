@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PrintfulTask</string>
+    <string name="now_playing_movies">Now playing movies</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="from">from</string>
+    <string name="voters">voters</string>
+</resources>
