@@ -1,5 +1,5 @@
 # PrintfulTask
-Technical task app for Printful.
+Technical task app for Printful using TMDb api.
 
 App Screenshots
 
